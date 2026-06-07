@@ -1,58 +1,320 @@
+here/* ==========================
+   ZAXLON AI PREMIUM STYLE
+========================== */
+
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:Arial,sans-serif;
+font-family:'Poppins',sans-serif;
 }
 
 body{
-background:linear-gradient(135deg,#050816,#0a1f44,#240046);
+
+background:#050816;
+
 color:white;
-height:100vh;
-display:flex;
-justify-content:center;
-align-items:center;
-text-align:center;
-overflow:hidden;
-animation:bgmove 8s infinite alternate;
+
+overflow-x:hidden;
+
+}
+
+/* Animated Background */
+
+.background{
+
+position:fixed;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+height:100%;
+
+background:
+
+radial-gradient(circle at 20% 20%,rgba(0,255,255,.15),transparent 25%),
+
+radial-gradient(circle at 80% 30%,rgba(140,0,255,.18),transparent 30%),
+
+radial-gradient(circle at 50% 80%,rgba(0,120,255,.12),transparent 30%),
+
+linear-gradient(135deg,#050816,#08152f,#140026);
+
+background-size:200% 200%;
+
+animation:bgmove 12s ease infinite;
+
+z-index:-2;
+
 }
 
 @keyframes bgmove{
-0%{background-position:left;}
-100%{background-position:right;}
+
+0%{
+
+background-position:0% 50%;
+
 }
 
-h1{
-font-size:55px;
+50%{
+
+background-position:100% 50%;
+
+}
+
+100%{
+
+background-position:0% 50%;
+
+}
+
+}
+
+/* Header */
+
+header{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+padding:20px 8%;
+
+backdrop-filter:blur(10px);
+
+background:rgba(255,255,255,.05);
+
+border-bottom:1px solid rgba(255,255,255,.1);
+
+}
+
+.logo{
+
+font-size:34px;
+
+font-weight:700;
+
+color:#00eaff;
+
 text-shadow:0 0 20px cyan;
+
 }
 
-h2{
-margin-top:10px;
-font-size:28px;
-color:#8be9fd;
+nav a{
+
+color:white;
+
+text-decoration:none;
+
+margin-left:25px;
+
+transition:.3s;
+
 }
 
-p{
-margin-top:20px;
-font-size:20px;
-color:#dddddd;
+nav a:hover{
+
+color:#00eaff;
+
+}
+
+/* Hero */
+
+.hero{
+
+min-height:80vh;
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:center;
+
+align-items:center;
+
+text-align:center;
+
+padding:20px;
+
+}
+
+.hero h1{
+
+font-size:60px;
+
+text-shadow:0 0 25px #00eaff;
+
+margin-bottom:20px;
+
+}
+
+.hero p{
+
+max-width:700px;
+
+font-size:22px;
+
+color:#d6d6d6;
+
+line-height:1.8;
+
+}
+
+.buttons{
+
+margin-top:35px;
+
+display:flex;
+
+gap:20px;
+
+flex-wrap:wrap;
+
 }
 
 button{
-margin-top:30px;
-padding:15px 40px;
-font-size:22px;
+
+padding:16px 40px;
+
 border:none;
+
 border-radius:15px;
-background:#6a00ff;
-color:white;
+
+font-size:20px;
+
 cursor:pointer;
-box-shadow:0 0 20px #6a00ff;
-transition:0.3s;
+
+background:linear-gradient(90deg,#00c6ff,#7d2cff);
+
+color:white;
+
+box-shadow:0 0 25px rgba(0,255,255,.4);
+
+transition:.3s;
+
 }
 
 button:hover{
-transform:scale(1.1);
-box-shadow:0 0 35px cyan;
+
+transform:translateY(-5px) scale(1.05);
+
+box-shadow:0 0 40px cyan;
+
+}
+
+/* Cards */
+
+.cards{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+gap:30px;
+
+padding:60px 8%;
+
+}
+
+.card{
+
+background:rgba(255,255,255,.06);
+
+border:1px solid rgba(255,255,255,.08);
+
+backdrop-filter:blur(15px);
+
+border-radius:20px;
+
+padding:35px;
+
+text-align:center;
+
+transition:.4s;
+
+}
+
+.card:hover{
+
+transform:translateY(-10px);
+
+box-shadow:0 0 30px rgba(0,255,255,.35);
+
+}
+
+.card h2{
+
+margin-top:15px;
+
+margin-bottom:10px;
+
+font-size:28px;
+
+}
+
+.card p{
+
+color:#d9d9d9;
+
+}
+
+/* Footer */
+
+footer{
+
+padding:30px;
+
+text-align:center;
+
+border-top:1px solid rgba(255,255,255,.1);
+
+color:#bdbdbd;
+
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+header{
+
+flex-direction:column;
+
+gap:15px;
+
+}
+
+nav{
+
+display:flex;
+
+flex-wrap:wrap;
+
+justify-content:center;
+
+}
+
+nav a{
+
+margin:8px;
+
+}
+
+.hero h1{
+
+font-size:38px;
+
+}
+
+.hero p{
+
+font-size:18px;
+
+}
+
   }
