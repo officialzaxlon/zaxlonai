@@ -43,3 +43,69 @@ card.style.transform="translateY(0px) scale(1)";
 // Welcome Message
 
 console.log("Zaxlon AI Loaded Successfully");
+// ==========================
+// ZAXLON AI SCRIPT PART 2
+// ==========================
+
+// Start AI button click
+const startAIButton = document.getElementById("startBtn");
+
+if(startAIButton){
+
+startAIButton.addEventListener("click",()=>{
+
+const hero=document.querySelector(".hero");
+
+hero.innerHTML=`
+
+<h1>🤖 Zaxlon AI</h1>
+
+<p>Welcome! Start your AI journey.</p>
+
+<div class="chat-preview">
+
+<input type="text" placeholder="Ask anything..." disabled>
+
+<button>Send</button>
+
+</div>
+
+`;
+
+});
+
+}
+
+// Card Click Effect
+
+document.querySelectorAll(".card").forEach((card)=>{
+
+card.addEventListener("click",()=>{
+
+const title=card.querySelector("h2").innerText;
+
+alert(title+" page will be available soon 🚀");
+
+});
+
+});
+
+// Smooth Navbar
+
+document.querySelectorAll("a").forEach(link=>{
+
+link.addEventListener("click",(e)=>{
+
+e.preventDefault();
+
+window.scrollTo({
+
+top:0,
+
+behavior:"smooth"
+
+});
+
+});
+
+});
