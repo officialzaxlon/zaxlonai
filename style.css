@@ -1,6 +1,6 @@
-here/* ==========================
-   ZAXLON AI PREMIUM STYLE
-========================== */
+/* =========================
+   ZAXLON AI STYLE PART 1
+========================= */
 
 *{
 margin:0;
@@ -11,7 +11,7 @@ font-family:'Poppins',sans-serif;
 
 body{
 
-background:#050816;
+background:#0b1020;
 
 color:white;
 
@@ -19,63 +19,13 @@ overflow-x:hidden;
 
 }
 
-/* Animated Background */
+/* Navbar */
 
-.background{
-
-position:fixed;
-
-top:0;
-
-left:0;
+.navbar{
 
 width:100%;
 
-height:100%;
-
-background:
-
-radial-gradient(circle at 20% 20%,rgba(0,255,255,.15),transparent 25%),
-
-radial-gradient(circle at 80% 30%,rgba(140,0,255,.18),transparent 30%),
-
-radial-gradient(circle at 50% 80%,rgba(0,120,255,.12),transparent 30%),
-
-linear-gradient(135deg,#050816,#08152f,#140026);
-
-background-size:200% 200%;
-
-animation:bgmove 12s ease infinite;
-
-z-index:-2;
-
-}
-
-@keyframes bgmove{
-
-0%{
-
-background-position:0% 50%;
-
-}
-
-50%{
-
-background-position:100% 50%;
-
-}
-
-100%{
-
-background-position:0% 50%;
-
-}
-
-}
-
-/* Header */
-
-header{
+height:70px;
 
 display:flex;
 
@@ -83,41 +33,55 @@ justify-content:space-between;
 
 align-items:center;
 
-padding:20px 8%;
+padding:0 30px;
+
+background:rgba(255,255,255,0.05);
 
 backdrop-filter:blur(10px);
 
-background:rgba(255,255,255,.05);
+position:fixed;
 
-border-bottom:1px solid rgba(255,255,255,.1);
+top:0;
+
+left:0;
+
+z-index:1000;
 
 }
 
 .logo{
 
-font-size:34px;
+font-size:28px;
 
 font-weight:700;
 
 color:#00eaff;
 
-text-shadow:0 0 20px cyan;
+}
+
+.navbar ul{
+
+display:flex;
+
+list-style:none;
+
+gap:20px;
 
 }
 
-nav a{
-
-color:white;
+.navbar ul li a{
 
 text-decoration:none;
 
-margin-left:25px;
+color:white;
 
-transition:.3s;
+transition:0.3s;
+
+font-size:16px;
 
 }
 
-nav a:hover{
+.navbar ul li a:hover{
 
 color:#00eaff;
 
@@ -127,7 +91,7 @@ color:#00eaff;
 
 .hero{
 
-min-height:80vh;
+height:100vh;
 
 display:flex;
 
@@ -147,63 +111,43 @@ padding:20px;
 
 font-size:60px;
 
-text-shadow:0 0 25px #00eaff;
-
 margin-bottom:20px;
 
 }
 
 .hero p{
 
+font-size:20px;
+
 max-width:700px;
 
-font-size:22px;
+opacity:.8;
 
-color:#d6d6d6;
-
-line-height:1.8;
+margin-bottom:30px;
 
 }
 
-.buttons{
+.hero button{
 
-margin-top:35px;
-
-display:flex;
-
-gap:20px;
-
-flex-wrap:wrap;
-
-}
-
-button{
-
-padding:16px 40px;
+padding:15px 40px;
 
 border:none;
 
-border-radius:15px;
+border-radius:50px;
 
-font-size:20px;
+font-size:18px;
 
 cursor:pointer;
 
-background:linear-gradient(90deg,#00c6ff,#7d2cff);
-
-color:white;
-
-box-shadow:0 0 25px rgba(0,255,255,.4);
+background:#00eaff;
 
 transition:.3s;
 
 }
 
-button:hover{
+.hero button:hover{
 
-transform:translateY(-5px) scale(1.05);
-
-box-shadow:0 0 40px cyan;
+transform:scale(1.08);
 
 }
 
@@ -215,27 +159,25 @@ display:grid;
 
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 
-gap:30px;
+gap:25px;
 
-padding:60px 8%;
+padding:80px 30px;
 
 }
 
 .card{
 
-background:rgba(255,255,255,.06);
+background:rgba(255,255,255,.05);
 
-border:1px solid rgba(255,255,255,.08);
-
-backdrop-filter:blur(15px);
+padding:30px;
 
 border-radius:20px;
-
-padding:35px;
 
 text-align:center;
 
 transition:.4s;
+
+backdrop-filter:blur(8px);
 
 }
 
@@ -243,78 +185,120 @@ transition:.4s;
 
 transform:translateY(-10px);
 
-box-shadow:0 0 30px rgba(0,255,255,.35);
-
 }
 
 .card h2{
 
-margin-top:15px;
-
-margin-bottom:10px;
-
-font-size:28px;
+margin:15px 0;
 
 }
-
-.card p{
-
-color:#d9d9d9;
-
-}
-
-/* Footer */
 
 footer{
 
-padding:30px;
-
 text-align:center;
 
-border-top:1px solid rgba(255,255,255,.1);
+padding:30px;
 
-color:#bdbdbd;
+opacity:.7;
+
+}￼Enter======================
+   ZAXLON AI STYLE PART 1
+========================= */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+
+background:#0b1020;
+
+color:white;
+
+overflow-x:hidden;
 
 }
 
-/* Mobile */
+/* Navbar */
 
-@media(max-width:768px){
+.navbar{
 
-header{
+width:100%;
 
-flex-direction:column;
-
-gap:15px;
-
-}
-
-nav{
+height:70px;
 
 display:flex;
 
-flex-wrap:wrap;
+justify-content:space-between;
+
+align-items:center;
+
+padding:0 30px;
+
+background:rgba(255,255,255,0.05);
+
+backdrop-filter:blur(10px);
+
+position:fixed;
+
+top:0;
+
+left:0;
+
+z-index:1000;
+
+}
+
+.logo{
+
+font-size:28px;
+
+font-weight:700;
+
+color:#00eaff;
+
+}
+
+.navbar ul{
+
+display:flex;
+
+list-style:none;
+
+gap:20px;
+
+}
+
+.navbar ul li a{
+
+text-decoration:none;
+
+color:white;
+
+transition:0.3s;
+
+font-size:16px;
+
+}
+
+.navbar ul li a:hover{
+
+color:#00eaff;
+
+}
+
+/* Hero */
+
+.hero{
+
+height:100vh;
+
+display:flex;
+
+flex-direction:column;
 
 justify-content:center;
 
-}
-
-nav a{
-
-margin:8px;
-
-}
-
-.hero h1{
-
-font-size:38px;
-
-}
-
-.hero p{
-
-font-size:18px;
-
-}
-
-  }
