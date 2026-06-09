@@ -302,3 +302,176 @@ flex-direction:column;
 
 justify-content:center;
 
+/* =========================
+   ZAXLON AI STYLE PART 2
+========================= */
+
+/* Animated Background */
+
+body::before{
+
+content:"";
+
+position:fixed;
+
+top:-50%;
+
+left:-50%;
+
+width:200%;
+
+height:200%;
+
+background:
+radial-gradient(circle,#00eaff22 0%,transparent 25%),
+radial-gradient(circle,#6a5cff22 0%,transparent 25%);
+
+animation:moveBg 20s linear infinite;
+
+z-index:-1;
+
+}
+
+@keyframes moveBg{
+
+0%{
+transform:rotate(0deg);
+}
+
+100%{
+transform:rotate(360deg);
+}
+
+}
+
+/* Hero Glow */
+
+.hero h1{
+
+background:linear-gradient(
+90deg,
+#00eaff,
+#6a5cff,
+#00eaff
+);
+
+background-size:300%;
+
+-webkit-background-clip:text;
+
+-webkit-text-fill-color:transparent;
+
+animation:glowText 6s linear infinite;
+
+}
+
+@keyframes glowText{
+
+0%{
+background-position:0%;
+}
+
+100%{
+background-position:300%;
+}
+
+}
+
+/* Hero Button Glow */
+
+.hero button{
+
+box-shadow:
+0 0 20px #00eaff,
+0 0 40px #00eaff55;
+
+}
+
+.hero button:hover{
+
+box-shadow:
+0 0 25px #00eaff,
+0 0 60px #00eaff;
+
+}
+
+/* Cards Upgrade */
+
+.card{
+
+border:1px solid rgba(255,255,255,.1);
+
+box-shadow:
+0 10px 30px rgba(0,0,0,.3);
+
+}
+
+.card:hover{
+
+box-shadow:
+0 0 20px #00eaff55,
+0 0 50px #00eaff22;
+
+}
+
+/* Card Icons */
+
+.card{
+
+font-size:22px;
+
+}
+
+.card h2{
+
+font-size:24px;
+
+}
+
+/* Footer */
+
+footer{
+
+border-top:1px solid rgba(255,255,255,.1);
+
+margin-top:40px;
+
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+.hero h1{
+
+font-size:38px;
+
+}
+
+.hero p{
+
+font-size:16px;
+
+}
+
+.navbar{
+
+padding:0 15px;
+
+}
+
+.navbar ul{
+
+gap:10px;
+
+font-size:14px;
+
+}
+
+.logo{
+
+font-size:20px;
+
+}
+
+   }
